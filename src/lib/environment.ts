@@ -5,7 +5,8 @@ import minimist from 'minimist';
 import _ from 'lodash';
 
 const cmdArgs = minimist(process.argv.slice(2));  //获取命令行参数
-const envVars = process.env;  //获取环境变量
+const envVars = process.env; 
+ //获取环境变量
 
 class Environment {
 

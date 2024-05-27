@@ -5,6 +5,7 @@ import chat from "./chat.ts";
 import ping from "./ping.ts";
 import token from './token.ts';
 import models from './models.ts';
+import chat_V2 from "./chat_v2.ts"
 
 export default [
     {
@@ -23,5 +24,6 @@ export default [
     chat,
     ping,
     token,
-    models
+    models,
+    chat_V2
 ];

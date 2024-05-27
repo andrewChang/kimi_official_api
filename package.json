@@ -13,13 +13,16 @@
     "dist/"
   ],
   "scripts": {
-    "dev": "tsup src/index.ts --format cjs,esm --sourcemap --dts --publicDir public --watch --onSuccess \"node dist/index.js\"",
+    "dev": "tsup src/index.ts --format esm --sourcemap --dts --publicDir public --watch --onSuccess \"node dist/index.js\"",
     "start": "node dist/index.js",
-    "build": "tsup src/index.ts --format cjs,esm --sourcemap --dts --clean --publicDir public"
+    "build": "tsup src/index.ts --format esm --sourcemap --dts --clean --publicDir public",
+    "build_official": "tsup src/official_api/kimi_chat.ts --format esm --sourcemap --dts --clean --publicDir public",
+    "start_official": "node dist/kimi_chat.js"
   },
   "author": "Vinlic",
   "license": "ISC",
   "dependencies": {
+    "agentkeepalive": "^4.5.0",
     "axios": "^1.6.7",
     "colors": "^1.4.0",
     "crc-32": "^1.2.2",
@@ -27,6 +30,7 @@
     "date-fns": "^3.3.1",
     "eventsource-parser": "^1.1.2",
     "fs-extra": "^11.2.0",
+    "http": "^0.0.1-security",
     "koa": "^2.15.0",
     "koa-body": "^5.0.0",
     "koa-bodyparser": "^4.4.1",
@@ -36,13 +40,16 @@
     "lodash": "^4.17.21",
     "mime": "^4.0.1",
     "minimist": "^1.2.8",
+    "node-fetch": "^3.0.0",
     "randomstring": "^1.3.0",
     "uuid": "^9.0.1",
     "yaml": "^2.3.4"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.14.202",
     "@types/mime": "^3.0.4",
+    "openai": "^4.47.1",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   }

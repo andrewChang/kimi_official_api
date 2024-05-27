@@ -1,10 +1,13 @@
 {
     "compilerOptions": {
       "baseUrl": ".",
+      "target": "ESNext",
       "module": "NodeNext",
       "moduleResolution": "NodeNext",
       "allowImportingTsExtensions": true,
       "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
       "noEmit": true,
       "paths": {
         "@/*": ["src/*"]
